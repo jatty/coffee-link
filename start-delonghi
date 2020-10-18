@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import pygatt
+
+bd_addr =        "00:1e:c0:xx:xx:xx" # insert your Bluetooth Address
+#service =       "00035b03-58e6-07dd-021a-08123a000300"
+characteristic = "00035b03-58e6-07dd-021a-08123a000301"
+#descriptor =    "00002902-0000-1000-8000-00805f9b34fb"
+
+adapter = pygatt.GATTToolBackend()
+
+try:
+  adapter.start()
+  device = adapter.connect(bd_addr)
+  # turn on machine:
+  device.char_write(characteristic,
+        bytearray([0x0d, 0x07, 0x84, 0x0f, 0x02, 0x01, 0x55, 0x12]))
+
+finally:
+  adapter.stop()
