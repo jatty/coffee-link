@@ -1,5 +1,5 @@
 # coffee-link
-Switch on DeLonghi ELITE 650.85 with python script via Bluetooth
+Switch on DeLonghi PrimaDonna ELITE with python script via Bluetooth
 
 As a prerequisite, you have to adjust the bluetooth address at the beginning of the script.
 
