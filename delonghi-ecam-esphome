@@ -1,0 +1,13 @@
+ble_client:
+  - mac_address: 00:1e:c0:xx:xx:xx
+    id: delonghi_ble_id
+
+switch:
+  - platform: template
+    name: "DeLonghi"
+    turn_on_action:
+      - ble_client.ble_write:
+          id: delonghi_ble_id
+          service_uuid: 00035b03-58e6-07dd-021a-08123a000300
+          characteristic_uuid: 00035b03-58e6-07dd-021a-08123a000301   
+          value: [0x0d, 0x07, 0x84, 0x0f, 0x02, 0x01, 0x55, 0x12]
