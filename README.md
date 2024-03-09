@@ -1,5 +1,7 @@
 # coffee-link
-Switch on DeLonghi PrimaDonna ELITE with python script via Bluetooth or with ESPhome snippet (Homeassistant integration via ESPhome)
+Switch on DeLonghi PrimaDonna ELITE via bluetooth
+   * with Python Script or
+   * with ESPhome snippet (Homeassistant integration)
 
 As a prerequisite, you have to adjust the bluetooth address at the beginning of the script.
 
